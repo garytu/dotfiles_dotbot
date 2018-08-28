@@ -1,0 +1,7 @@
+
+[ ! -d ~/.zplug ] && curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+source ~/.zplug/init.zsh
+
+
+zplug "plugins/tmux",              from:oh-my-zsh
+zplug "plugins/tmuxinator",        from:oh-my-zsh
