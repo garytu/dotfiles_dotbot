@@ -5,8 +5,8 @@ DEFAULT_COLOR=$DEFAULT_FOREGROUND
 # powerlevel9k prompt theme
 #DEFAULT_USER=$USER
 
-#POWERLEVEL9K_MODE="nerdfont-complete"
-POWERLEVEL9K_MODE="awesome-patched"
+POWERLEVEL9K_MODE="nerdfont-complete"
+# POWERLEVEL9K_MODE="awesome-patched"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 #POWERLEVEL9K_SHORTEN_STRATEGY="truncate_right"
 

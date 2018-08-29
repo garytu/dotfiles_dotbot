@@ -1,0 +1,4 @@
+- shell:
+  - 
+    - os/linux/nerd-fonts.sh
+    - Install Nerd Fonts
