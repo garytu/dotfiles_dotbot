@@ -4,3 +4,4 @@
       relink: true
 - link:
     ~/.zshrc: shells/zsh/zshrc
+    ~/.zsh/powerlevel9k.zsh: shells/zsh/powerlevel9k.zsh

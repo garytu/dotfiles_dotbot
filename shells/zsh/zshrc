@@ -2,6 +2,50 @@
 [ ! -d ~/.zplug ] && curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 source ~/.zplug/init.zsh
 
-
 zplug "plugins/tmux",              from:oh-my-zsh
 zplug "plugins/tmuxinator",        from:oh-my-zsh
+zplug "plugins/nvm",               from:oh-my-zsh
+
+zplug "plugins/git",               from:oh-my-zsh, if:"(( $+commands[git] ))"
+zplug "plugins/golang",            from:oh-my-zsh, if:"(( $+commands[go] ))"
+zplug "plugins/docker",            from:oh-my-zsh, if:"(( $+commands[docker] ))"
+zplug "plugins/docker-compose",    from:oh-my-zsh, if:"(( $+commands[docker-compose] ))"
+
+# Supports oh-my-zsh plugins and the like
+if [[ $OSTYPE = (linux)* ]]; then
+  zplug "plugins/ubuntu",     from:oh-my-zsh, if:"(( $+commands[apt] ))"
+  zplug "plugins/archlinux",     from:oh-my-zsh, if:"(( $+commands[pacman] ))"
+  zplug "plugins/dnf",           from:oh-my-zsh, if:"(( $+commands[dnf] ))"
+  zplug "plugins/systemd",           from:oh-my-zsh, if:"(( $+commands[systemctl] ))"
+fi
+
+if [[ $OSTYPE = (darwin)* ]]; then
+  zplug "lib/clipboard",         from:oh-my-zsh
+  zplug "plugins/osx",           from:oh-my-zsh
+  zplug "plugins/brew",          from:oh-my-zsh, if:"(( $+commands[brew] ))"
+  zplug "plugins/macports",      from:oh-my-zsh, if:"(( $+commands[port] ))"
+fi
+
+# Load theme
+zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check; then
+  printf "Install plugins? [y/N]: "
+  if read -q; then
+      echo; zplug install
+  fi
+fi
+
+if zplug check "bhilburn/powerlevel9k"; then
+  source ~/.zsh/powerlevel9k.zsh
+fi
+
+# History
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=$HISTSIZE
+
+zplug load
+
+[[ -d ~/bin ]] && export PATH=~/bin:$PATH
