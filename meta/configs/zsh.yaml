@@ -3,5 +3,6 @@
       create: true
       relink: true
 - link:
-    ~/.zshrc: shells/zsh/zshrc
-    ~/.zsh/powerlevel9k.zsh: shells/zsh/powerlevel9k.zsh
+    # ~/.zshrc: zsh/rc/zshrc.zplug
+    ~/.zshrc: zsh/rc/zshrc.antigen
+    # ~/.zshrc: zsh/rc/zshrc.antibody

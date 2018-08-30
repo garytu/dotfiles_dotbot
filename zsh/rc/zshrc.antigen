@@ -1,0 +1,25 @@
+[ ! -f ~/.zsh/antigen.zsh ] && curl -L git.io/antigen > ~/.zsh/antigen.zsh
+source ~/.zsh/antigen.zsh
+
+# antigen use oh-my-zsh
+
+antigen bundle history
+antigen bundle clipboard
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
+
+# antigen bundle sindresorhus/pure
+antigen theme bhilburn/powerlevel9k powerlevel9k
+source ~/.dotfiles/zsh/powerlevel9k.zsh
+
+
+antigen bundle git
+
+antigen bundle rupa/z
+
+antigen apply
+
+source ~/.dotfiles/zsh/alias.zsh
+source ~/.dotfiles/zsh/config.zsh

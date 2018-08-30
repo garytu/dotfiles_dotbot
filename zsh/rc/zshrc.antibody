@@ -1,0 +1,3 @@
+source <(antibody init)
+
+antibody bundle < ~/.dotfiles/shells/zsh/plugins.txt
