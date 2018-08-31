@@ -46,11 +46,7 @@ if zplug check "bhilburn/powerlevel9k"; then
   source ~/.zsh/powerlevel9k.zsh
 fi
 
-# History
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=$HISTSIZE
-
 zplug load
 
-[[ -d ~/bin ]] && export PATH=~/bin:$PATH
+source ~/.dotfiles/zsh/alias.zsh
+source ~/.dotfiles/zsh/config.zsh
