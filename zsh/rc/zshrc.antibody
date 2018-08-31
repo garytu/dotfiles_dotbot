@@ -9,6 +9,8 @@ antibody bundle robbyrussell/oh-my-zsh folder:lib/key-bindings
 
 antibody bundle robbyrussell/oh-my-zsh folder:lib/git
 antibody bundle robbyrussell/oh-my-zsh folder:plugins/git
+antibody bundle robbyrussell/oh-my-zsh folder:lib/nvm
+antibody bundle robbyrussell/oh-my-zsh folder:plugins/nvm
 
 antibody bundle zsh-users/zsh-syntax-highlighting
 antibody bundle zsh-users/zsh-history-substring-search
