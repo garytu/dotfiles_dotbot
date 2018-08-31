@@ -14,5 +14,6 @@ setopt hist_ignore_all_dups     # Remember only one unique copy of the command.
 setopt hist_reduce_blanks       # Remove superfluous blanks.
 setopt hist_save_no_dups        # Omit older commands in favor of newer ones.
 
-[[ -d ~/bin ]] && export PATH=~/bin:$PATH
+export GOPATH=$HOME/go
 [[ -d ~/go/bin ]] && export PATH=~/go/bin:$PATH
+[[ -d ~/bin ]] && export PATH=~/bin:$PATH

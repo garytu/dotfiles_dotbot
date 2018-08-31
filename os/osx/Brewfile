@@ -1,2 +1,7 @@
-tap "caskroom/fonts"
-cask "font-hack-nerd-font"
+brew "grc"
+brew "go"
+brew "mosh"
+
+cask "font-firacode-nerd-font"
+cask "font-firacode-nerd-font-mono"
+cask "kdiff3"

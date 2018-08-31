@@ -1,5 +1,7 @@
 source <(antibody init)
 
+# Set ZSH to load oh-my-zsh properly
+# https://github.com/getantibody/antibody/issues/218
 ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
 antibody bundle robbyrussell/oh-my-zsh
 
@@ -9,23 +11,24 @@ antibody bundle robbyrussell/oh-my-zsh folder:lib/key-bindings
 
 antibody bundle robbyrussell/oh-my-zsh folder:lib/git
 antibody bundle robbyrussell/oh-my-zsh folder:plugins/git
-antibody bundle robbyrussell/oh-my-zsh folder:lib/nvm
-antibody bundle robbyrussell/oh-my-zsh folder:plugins/nvm
+antibody bundle robbyrussell/oh-my-zsh folder:plugins/golang
+
+export NVM_LAZY_LOAD=true
+export NVM_AUTO_USE=true
+antibody bundle lukechilds/zsh-nvm
+antibody bundle lukechilds/zsh-better-npm-completion
 
 antibody bundle zsh-users/zsh-syntax-highlighting
 antibody bundle zsh-users/zsh-history-substring-search
 antibody bundle zsh-users/zsh-autosuggestions
 antibody bundle zsh-users/zsh-completions
 
-# antibody bundle sindresorhus/pure
+antibody bundle zpm-zsh/colors
+antibody bundle rupa/z
 
 source ~/.dotfiles/zsh/powerlevel9k.zsh
 antibody bundle bhilburn/powerlevel9k
 
-
-antibody bundle rupa/z
-
-# antibody apply
-
 source ~/.dotfiles/zsh/alias.zsh
+source ~/.dotfiles/zsh/bindkey.zsh
 source ~/.dotfiles/zsh/config.zsh
