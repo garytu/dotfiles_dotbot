@@ -293,3 +293,8 @@ bind C-a send-prefix
 
 # move status line to top
 #set -g status-position top
+
+#urxvt tab like window switching (-n: no prior escape seq)
+bind -n S-down new-window
+bind -n S-left prev
+bind -n S-right next
