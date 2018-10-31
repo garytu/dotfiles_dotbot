@@ -13,6 +13,8 @@ antibody bundle robbyrussell/oh-my-zsh folder:lib/git
 antibody bundle robbyrussell/oh-my-zsh folder:plugins/git
 antibody bundle robbyrussell/oh-my-zsh folder:plugins/golang
 
+antibody bundle robbyrussell/oh-my-zsh folder:plugins/pyenv
+
 export NVM_LAZY_LOAD=true
 export NVM_AUTO_USE=true
 antibody bundle lukechilds/zsh-nvm
