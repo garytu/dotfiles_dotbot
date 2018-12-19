@@ -18,3 +18,5 @@ export GOPATH=$HOME/go
 [[ -d ~/go/bin ]] && export PATH=~/go/bin:$PATH
 [[ -d ~/bin ]] && export PATH=~/bin:$PATH
 [[ -f ~/.proxy ]] && source ~/.proxy
+
+export no_proxy=localhost,127.0.0.1

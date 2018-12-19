@@ -2,19 +2,25 @@
 [ ! -d  /.zplug ] && curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 source ~/.zplug/init.zsh
 
-zplug "plugins/tmux",              from:oh-my-zsh
-zplug "plugins/tmuxinator",        from:oh-my-zsh
-zplug "plugins/nvm",               from:oh-my-zsh
+# zplug "plugins/tmux",              from:oh-my-zsh
+# zplug "plugins/tmuxinator",        from:oh-my-zsh
+# zplug "plugins/nvm",               from:oh-my-zsh
 
 zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-completions"
 
-# Color plugins
 zplug "plugins/colored-man-page",  from:oh-my-zsh
-
 zplug "plugins/git",               from:oh-my-zsh, if:"(( $+commands[git] ))"
 zplug "plugins/golang",            from:oh-my-zsh, if:"(( $+commands[go] ))"
 zplug "plugins/docker",            from:oh-my-zsh, if:"(( $+commands[docker] ))"
 zplug "plugins/docker-compose",    from:oh-my-zsh, if:"(( $+commands[docker-compose] ))"
+
+export NVM_LAZY_LOAD=true
+export NVM_AUTO_USE=true
+zplug "lukechilds/zsh-nvm"
+zplug "lukechilds/zsh-better-npm-completion"
 
 # Supports oh-my-zsh plugins and the like
 if [[ $OSTYPE = (linux)* ]]; then
@@ -34,6 +40,8 @@ fi
 # Load theme
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 
+zplug "rupa/z", use:z.sh
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check; then
   printf "Install plugins? [y/N]: "
@@ -43,10 +51,11 @@ if ! zplug check; then
 fi
 
 if zplug check "bhilburn/powerlevel9k"; then
-  source ~/.zsh/powerlevel9k.zsh
+  source ~/.dotfiles/zsh/powerlevel9k.zsh
 fi
 
 zplug load
 
 source ~/.dotfiles/zsh/alias.zsh
+source ~/.dotfiles/zsh/bindkey.zsh
 source ~/.dotfiles/zsh/config.zsh
