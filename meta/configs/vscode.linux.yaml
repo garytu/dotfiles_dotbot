@@ -1,0 +1,8 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+- shell:
+  - mkdir -p ~/.config/Code/User
+- link:
+    ~/.config/Code/User/settings.json: apps/vscode/settings.linux.json
