@@ -3,6 +3,6 @@
       create: true
       relink: true
 - link:
-    ~/.zshrc: zsh/rc/zshrc.zplug
+    # ~/.zshrc: zsh/rc/zshrc.zplug
     # ~/.zshrc: zsh/rc/zshrc.antigen
-    # ~/.zshrc: zsh/rc/zshrc.antibody
+    ~/.zshrc: zsh/rc/zshrc.antibody
