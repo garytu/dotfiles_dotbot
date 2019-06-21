@@ -1,0 +1,7 @@
+! swap mac's command/control keys
+
+clear Control
+clear Mod2
+
+add Control     = Meta_L Meta_R
+add Mod2        = Control_L Control_R

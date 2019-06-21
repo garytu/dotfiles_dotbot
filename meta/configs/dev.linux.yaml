@@ -1,3 +1,11 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- link:
+    ~/.Xmodmap: config/Xmodmap
+
 - shell:
   - git config --global credential.helper 'store'
 

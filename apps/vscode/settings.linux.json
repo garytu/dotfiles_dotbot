@@ -1,5 +1,9 @@
 {
     "window.titleBarStyle": "native",
-    "keyboard.dispatch": "keyCode"
-  }
-  
+    "keyboard.dispatch": "keyCode",
+    "editor.fontFamily": "'Hack Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "terminal.integrated.fontFamily": "'Hack Nerd Font Mono', monospace",
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.rendererType": "dom",
+    "workbench.colorTheme": "Monokai"
+}

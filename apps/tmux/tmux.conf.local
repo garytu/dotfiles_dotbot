@@ -295,6 +295,6 @@ bind C-a send-prefix
 #set -g status-position top
 
 #urxvt tab like window switching (-n: no prior escape seq)
-bind -n S-down new-window
+bind -n S-down new-window zsh
 bind -n S-left prev
 bind -n S-right next

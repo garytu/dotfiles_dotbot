@@ -19,4 +19,10 @@ export GOPATH=$HOME/go
 [[ -d ~/bin ]] && export PATH=~/bin:$PATH
 [[ -f ~/.proxy ]] && source ~/.proxy
 
+if [[ $OSTYPE = (linux)* ]]; then
+  [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
+  [[ -f ~/bin/dpp4 ]] && source ~/bin/dpp4
+  PATH=/snap/bin:$PATH
+fi
+
 export no_proxy=localhost,127.0.0.1

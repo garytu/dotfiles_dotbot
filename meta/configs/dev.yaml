@@ -1,3 +1,8 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
 - link:
     ~/.editorconfig: config/editorconfig
     ~/.gdbinit: config/gdbinit
