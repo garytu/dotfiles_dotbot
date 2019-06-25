@@ -25,4 +25,6 @@ if [[ $OSTYPE = (linux)* ]]; then
   PATH=/snap/bin:$PATH
 fi
 
+[[ -f ~/.gvm/scripts/gvm ]] && source ~/.gvm/scripts/gvm
+
 export no_proxy=localhost,127.0.0.1
