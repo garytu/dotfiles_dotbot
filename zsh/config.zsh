@@ -20,6 +20,7 @@ export GOPATH=$HOME/go
 [[ -f ~/.proxy ]] && source ~/.proxy
 
 if [[ $OSTYPE = (linux)* ]]; then
+  [[ -f /home/linuxbrew/.linuxbrew/bin/brew ]] && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
   [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
   [[ -f ~/bin/dpp4 ]] && source ~/bin/dpp4
   PATH=/snap/bin:$PATH
