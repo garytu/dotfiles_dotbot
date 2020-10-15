@@ -1,3 +1,4 @@
+export PATH=/usr/local/bin:$PATH
 source <(antibody init)
 
 # Set ZSH to load oh-my-zsh properly

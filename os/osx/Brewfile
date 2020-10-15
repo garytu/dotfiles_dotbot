@@ -1,7 +1,11 @@
 brew "grc"
+brew "antibody"
+brew "alfred"
+brew "tmux"
 brew "go"
 brew "mosh"
 
+cask "visual-studio-code"
 cask "font-firacode-nerd-font"
 cask "font-firacode-nerd-font-mono"
 cask "kdiff3"
